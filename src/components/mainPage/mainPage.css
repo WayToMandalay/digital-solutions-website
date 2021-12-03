@@ -1,0 +1,159 @@
+.mainPage {
+  padding: 42px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.mainPage__title {
+  font-size: 56px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 26px;
+  line-height: 80px;
+}
+
+.mainPage__semi-title {
+  text-transform: uppercase;
+  color: #018FDE;
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 7px;
+}
+
+.mainPage__signature {
+  position: relative;
+  overflow: hidden;
+  width: 502px;
+  height: 9px;
+  margin-bottom: 25px;
+}
+
+.mainPage__signature:before,
+.mainPage__signature:after {
+  content: '';
+  width: 72%;
+  height: 1px;
+  position: absolute;
+  border-bottom: 1px solid #121212;
+  bottom: 0;
+  left: 0;
+  transform-origin: left;
+}
+
+.mainPage__signature:after {
+  width: 100%;
+  transform: rotate(-1deg);
+}
+
+.mainPage__info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 24px;
+  align-items: center;
+}
+
+.mainPage__info-text {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.btn-dark {
+  color: #fff;
+  padding: 8px 24px;
+  text-align: center;
+  border: 1px solid #121212;
+  border-radius: 0;
+  transform: translate(4px, -4px);
+  background-color: #121212; 
+  transition: transform 0.3s ease; 
+}
+
+.mainPage__corner_1 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 10px;
+  height: 10px;
+}
+
+.mainPage__corner_1:before,
+.mainPage__corner_1:after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 1px;
+  transform-origin: left;
+  border-bottom: 1px solid #121212;
+}
+
+.mainPage__corner_1:after {
+  transform: rotate(90deg);
+}
+
+.mainPage__corner_2 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 10px;
+  height: 10px;
+}
+
+.mainPage__corner_2:before,
+.mainPage__corner_2:after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 1px;
+  transform-origin: right;
+  border-bottom: 1px solid #121212;
+}
+
+.mainPage__corner_2:after {
+  transform: rotate(-270deg);
+}
+
+@media  (max-width: 768px) {
+  .mainPage__title {
+    font-size: 48px;
+    line-height: 72px;
+  }
+
+  .mainPage__semi-title {
+    font-size: 24px;
+  }
+
+  .mainPage__signature {
+    width: 80%;
+  }
+
+  
+}
+
+@media  (max-width: 500px) {
+  .mainPage__title {
+    font-size: 32px;
+    line-height: 48px;
+  }
+
+  .mainPage__semi-title {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .mainPage__corner_1,
+  .mainPage__corner_2 {
+    display: none;
+  }
+}
+
+@media  (max-width: 424px) {
+  .mainPage__info-text {
+    margin-bottom: 20px;
+  }
+}
